@@ -46,7 +46,9 @@ Ajouter la dépendance `spring-cloud-starter-circuitbreaker-resilience4j` dans l
 1. Démarrer `discovery-service` :  
    `mvn spring-boot:run -pl discovery-service`
 2. Démarrer les autres services :
+
    `mvn spring-boot:run -pl config-service`
+
    `mvn spring-boot:run -pl customer-service`  
    `mvn spring-boot:run -pl inventory-service`  
    `mvn spring-boot:run -pl billing-service`
@@ -60,7 +62,8 @@ Ajouter la dépendance `spring-cloud-starter-circuitbreaker-resilience4j` dans l
 - **Console H2** : `/h2-console` sur chaque service (ex : [http://localhost:8081/h2-console](http://localhost:8081/h2-console))
 - **Actuator** : `/actuator` sur chaque service (ex : [http://localhost:8082/actuator](http://localhost:8082/actuator))
 - **Configuration globale** : `/application/default` configuration par défault (ex : [http://localhost:9999/application/default](http://localhost:9999/application/default))
-- **Configuration de chaque service** : `/service/env` configuration de chaque service (ex : [http://localhost:9999/customer-service/dev](http://localhost:9999/customer-service/dev))
+- **Configuration de chaque service** : `/service/env` configuration de chaque service selon l'environnement (ex : [http://localhost:9999/customer-service/dev](http://localhost:9999/customer-service/dev)) (ex : [http://localhost:9999/customer-service/prod](http://localhost:9999/customer-service/prod))
+- **Configuration par défaut de chaque service** : `/service/default` configuration par défault de chaque service (ex : [http://localhost:9999/customer-service/default](http://localhost:9999/customer-service/default))
 
 ## Technologies
 
